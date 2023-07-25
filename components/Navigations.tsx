@@ -10,6 +10,8 @@ interface NavigationsProps {
     data: Category[];
 };
 
+export const revalidate = 0;
+
 const Navigations: React.FC<NavigationsProps> = ({
     data
 }) => {
