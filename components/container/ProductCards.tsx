@@ -5,6 +5,7 @@ import { Expand, ShoppingCart } from "lucide-react";
 
 import { Product } from "@/utils/types";
 import IconButton from "@/components/container/IconButton";
+import CurrencyTag from "@/components/container/CurrencyTag";
 
 interface ProductCardsProps {
     data: Product;
@@ -34,6 +35,13 @@ const ProductCards: React.FC<ProductCardsProps> = ({
                         />
                     </div>
                 </div>
+            </div>
+            <div>
+                <p className="font-semibold text-lg">{data.name}</p>
+                <p className="text-sm text-gray-500">{data.category.name}</p>
+            </div>
+            <div className="flex items-center justify-between">
+                <CurrencyTag value={data.price} />
             </div>
         </div>
     );

@@ -7,7 +7,7 @@ const Container: React.FC<ContainerProps> = ({
     children
 }) => {
     return (  
-        <div className="mx-auto max-w-full">
+        <div className="mx-auto max-w-[100rem]">
             {children}
         </div>
     );
