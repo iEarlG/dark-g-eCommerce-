@@ -5,6 +5,7 @@ import getProducts from "@/actions/getProducts";
 
 import Container from "@/components/container/Containers";
 import ItemGallery from "@/components/gallery/ItemGallery";
+import ProductInfo from "@/components/ProductInfo";
 
 interface ProductPageProps {
     params: {
@@ -25,10 +26,10 @@ const ProductPage: React.FC<ProductPageProps> = async ({
         <div className="bg-white">
             <Container>
                 <div className="px-4 sm:px-6 lg:px-8 py-10">
-                    <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-8">
+                    <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
                         <ItemGallery images={product.images} />
-                        <div className="mt-10 sm:mt-16 lg:mt-0 px-4 sm:p-0">
-                            <div>Info</div>
+                        <div className="mt-10 sm:mt-16 lg:mt-0 px-4 sm:px-0">
+                            <ProductInfo data={product} />
                         </div>
                     </div>
                     <hr className="my-10" />

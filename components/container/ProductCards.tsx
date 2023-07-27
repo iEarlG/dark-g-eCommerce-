@@ -8,6 +8,7 @@ import { Product } from "@/utils/types";
 import IconButton from "@/components/container/IconButton";
 import CurrencyTag from "@/components/container/CurrencyTag";
 
+export const revalidate = 0;
 interface ProductCardsProps {
     data: Product;
 }
