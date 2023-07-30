@@ -18,9 +18,9 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
         <div>
             <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
             <div className="flex items-end justify-between mt-3">
-                <p className="text-xl text-gray-500">
+                <span className="text-xl text-gray-500">
                     <CurrencyTag value={data.price} />
-                </p>
+                </span>
             </div>
             <hr className="my-4" />
             <div className="flex flex-col gap-y-6">
