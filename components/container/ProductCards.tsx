@@ -6,9 +6,12 @@ import { Expand, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 
 import { Product } from "@/utils/types";
+
 import IconButton from "@/components/container/IconButton";
 import CurrencyTag from "@/components/container/CurrencyTag";
+
 import usePreviewModal from "@/hooks/usePreviewModal";
+import useCartModal from "@/hooks/useCartModal";
 
 export const revalidate = 0;
 interface ProductCardsProps {
@@ -20,6 +23,7 @@ const ProductCards: React.FC<ProductCardsProps> = ({
 }) => {
     const router = useRouter();
     const previewModal = usePreviewModal();
+    const cart = useCartModal();
 
     const handleClick = () => {
         router.push(`/product/${data?.id}`);
@@ -29,6 +33,12 @@ const ProductCards: React.FC<ProductCardsProps> = ({
         event.stopPropagation();
 
         previewModal.onOpen(data);
+    };
+
+    const onAddToCartProduct: MouseEventHandler<HTMLButtonElement> = (event) => {
+        event.stopPropagation();
+
+        cart.addItems(data);
     };
 
     return ( 
@@ -47,7 +57,7 @@ const ProductCards: React.FC<ProductCardsProps> = ({
                             icon={<Expand size={20} className="text-gray-600" />}
                         />
                         <IconButton 
-                            onClick={() => {}}
+                            onClick={onAddToCartProduct}
                             icon={<ShoppingCart size={20} className="text-gray-600" />}
                         />
                     </div>

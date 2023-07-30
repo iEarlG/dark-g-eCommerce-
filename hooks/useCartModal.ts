@@ -19,7 +19,7 @@ const useCartModal = create(persist<CartModalState>((set, get) => ({
         const existingItems = currentItems.find((item) => item.id === data.id);
 
         if (existingItems) {
-            return toast("Item already added to cart");
+            return toast.error("Item already added to cart");
         }
 
         set({items: [...get().items, data]});
