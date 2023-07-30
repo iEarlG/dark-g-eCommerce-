@@ -8,7 +8,7 @@ import MobileFilters from "@/components/category/MobileFilters";
 import Filters from "@/components/category/Filters";
 import Billboard from "@/components/database/Billboard";
 import Container from "@/components/container/Containers";
-import NoResults from "@/components/container/NoResults";
+import { NoResults } from "@/components/container/NoResults";
 import ProductCards from "@/components/container/ProductCards";
 
 export const revalidate = 0;
