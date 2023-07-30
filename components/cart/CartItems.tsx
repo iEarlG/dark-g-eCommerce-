@@ -36,7 +36,7 @@ const CartItems: React.FC<CartItemsProps> = ({
             </div>
             <div className="relative flex flex-1 flex-col justify-between ml-4 sm:ml-6">
                 <div className="absolute z-10 top-0 right-0">
-                    <IconButton onClick={onRemovedItems} icon={<TrashIcon size={16} />} />
+                    <IconButton onClick={() => onRemovedItems()} icon={<TrashIcon size={16} />} />
                 </div>
                 <div className="relative sm:grid sm:grid-cols-2 sm:gap-x-6 pr-10 sm:pr-0">
                     <div className="flex justify-between">
