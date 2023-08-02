@@ -26,7 +26,7 @@ const CartItems: React.FC<CartItemsProps> = ({
 
     return ( 
         <li className="flex py-6 border-b">
-            <div className="relative h-24 w-24 sm:h-48 sm:w-48 rounded-md overflow-hidden">
+            <div className="relative h-24 w-24 sm:h-48 sm:w-48 rounded-md overflow-hidden aspect-square bg-gray-100">
                 <Image 
                     alt="Cart Images"
                     src={data.images[0].url}
